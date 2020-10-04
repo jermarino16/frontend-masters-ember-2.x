@@ -7,16 +7,20 @@ const Router = EmberRouter.extend({
 });
 
 Router.map(function () {
+  //List of Orgs
   this.route("orgs");
 
+  //Individual Org
   this.route(
     "org",
     {
       path: "org/:id",
     },
     function () {
+      //List of REPOS
       this.route("repos");
 
+      //Individual repo
       this.route(
         "repo",
         {
